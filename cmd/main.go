@@ -1,7 +1,12 @@
 package main
 
-import "github.com/im-a-giraffe/hello-go/server"
+import (
+	"fmt"
+	"github.com/im-a-giraffe/hello-go/gitparser"
+)
 
 func main() {
-	server.Run()
+	//server.Run()
+	fmt.Println(gitparser.GetVersion())
+	gitparser.CloneSampleRepository()
 }
