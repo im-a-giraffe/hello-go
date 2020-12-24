@@ -29,4 +29,24 @@ func SliceTest() {
 	bb = append(bb, true, false)
 
 	fmt.Println(b, ints)
+
+	type User struct {
+		Name string
+	}
+
+	pointer := &User{Name: "Martin"}
+	pointer.Name = "Harald"
+	fmt.Println(pointer)
+
+	asPointer := getUserAsPointer("Harald")
+	fmt.Printf("Pointer %p", asPointer)
+
+	var gloriousSentencesOfMartin = map[string]string{}
+	gloriousSentencesOfMartin["martin"] = "Hello World"
+	gloriousSentencesOfMartin["martin2"] = "how much is the fish"
+	fmt.Println(gloriousSentencesOfMartin)
+}
+
+func getUserAsPointer(name string) *User {
+	return &User{Name: name}
 }

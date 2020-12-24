@@ -16,6 +16,9 @@ func User(name string) *User {
 
 ## Data structures
 
+### Variables
+
+
 ### Structs
 Structs are a combination of multiple variables and can be defined as follows:
 
@@ -50,4 +53,22 @@ slice := []bool{true, false, true, true, false, true}
 - Have the attributes `len(slice)` and `cap(slice)`
 - Can be extended with `append(slice, values...)` which is returning the new slice
 
+### Maps
+Maps can be used for assigning a key to a value and can be created as follows:
+```golang
+m := map[string]string
+```
+
 ### Pointers
+Basic usage of pointers as follows:
+
+```golang
+type User struct {
+	Name string
+}
+
+pointer := &User {Name: "Martin"}
+```
+
+- Pointers can be created by calling using the `&`-symbol in front of an object
+- Passing or returning values as pointers can be signaled by using the asterisk symbol `*User`
