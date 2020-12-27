@@ -45,6 +45,21 @@ func SliceTest() {
 	gloriousSentencesOfMartin["martin"] = "Hello World"
 	gloriousSentencesOfMartin["martin2"] = "how much is the fish"
 	fmt.Println(gloriousSentencesOfMartin)
+
+	m := map[string]string{}
+	fmt.Println(len(m))
+
+	MethodWithCallback(func(result string) {
+		fmt.Printf("Function returned %s", result)
+	})
+}
+
+func cb(result string) {
+
+}
+
+func MethodWithCallback(f func(result string)) {
+	f("Hello World")
 }
 
 func getUserAsPointer(name string) *User {

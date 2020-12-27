@@ -14,6 +14,23 @@ func User(name string) *User {
 }
 ```
 
+## Loops
+Arrays, slices and maps can be iterated as follows:
+
+```golang
+x := []string{"Hello", "Go"}
+for index, value := range x {
+	fmt.Printf("%i -> %s", index, value)
+}
+```
+
+Otherwise, loops can be created as follows:
+```golang
+for i := 1; i <= 5; i++ {
+	
+}
+```
+
 ## Data structures
 
 ### Variables
